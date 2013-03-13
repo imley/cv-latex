@@ -1,0 +1,232 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[ctexart,11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual_cn} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\usepackage{CJKutf8}
+\usepackage{xeCJK}
+\usepackage{footmisc}
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+\firstname{雷} % Your first name
+\familyname{姜} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{个人简历}
+\address{北京市, 海淀区}{西土城路10号, 北京邮电大学 100876}
+\mobile{(086) 186 0006 2203}
+\email{ley@imley.net}
+\homepage{cv.imley.net/?from=ms}{cv.imley.net} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+\photo[70pt][0.4pt]{pictures/jl.jpg} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\quote{"知识就是力量" - 法国就是培根}
+
+%----------------------------------------------------------------------------------------
+
+\setCJKmainfont[BoldFont=黑体, ItalicFont=楷体]{宋体} 
+\begin{document}
+%\begin{CJK}{UTF8}{gkai}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{教育背景}
+
+\cventry{2011--2014}{工学硕士}{北京邮电大学}{}{\textit{GPA -- 82}}{优秀研究生}  % Arguments not required can be left empty
+\cventry{2007--2011}{工学学士}{北京邮电大学}{}{\textit{GPA -- 89, 前5\%}}{优秀毕业生}
+
+%\section{Masters Thesis}
+
+%\cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
+%\cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
+%\cvitem{Description}{This thesis explored the idea that money has been the cause of untold %anguish and suffering in the world. I found that it has, in fact, not.}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{相关经验}
+
+%------------------------------------------------
+
+\subsection{实习经历}
+
+\cventry{2011.5--2012.2}{实习测试开发工程师}{百度}{百度地图引擎测试}{}{
+\itshape
+所在小组主要负责百度地图后端引擎模块的测试。实习期间，主要负责组内持续集成事务的推进，负责公交、跨城市公交等模块的功能测试。
+\upshape
+\begin{itemize}
+\item 作为测试负责人，参与了\bfseries{跨城市公交}\mdseries项目设计评审、开发、上线
+\item 开发了公交及跨城市公交模块的小数据生成工具，分别基于CodeIgniter(PHP)及Python
+\item 维护了多个模块的自动化测试用例，搭建了组内的CI环境并建立了CI脚本框架
+\item 获优秀实习生提名，最终获得\textbf{NSQA最萌正太奖}
+\end{itemize}}
+
+%------------------------------------------------
+
+\subsection{项目经历}
+
+\cventry{2012.2--现在}{云海3.0}{项目负责人}{}{开放调度的融合云计算平台}{
+\itshape该平台基于Java实现，融合了传统的PaaS云平台和IaaS平台提供的服务。底层使用Jetty托管Java Web应用，libvirt+KVM托管虚拟机应用。并使用Nginx实现基于域名的应用路由和多实例负载均衡。
+\upshape
+\begin{itemize}
+\item 作为项目负责人，设计重构技术方案，统一编码规范，推进项目执行
+\item 负责底层框架及多个模块的设计开发
+\item 引入\textsc{hudson}进行持续集成实验，引入\textsc{Chef}进行自动化部署实验
+\end{itemize}}
+
+%------------------------------------------------
+
+\cventry{2012.10--2012.12}{Freesearch}{项目参与者}{}{SV模式的搜索引擎}{
+\itshape该搜索引擎用于内部产品的搜索，改变了传统的基于抓取的方式，开发者通过API主动提交需要索引的内容，另外还提供了基于标签的信息存储能力。
+\upshape
+\begin{itemize}
+\item 参与了项目的设计、评审，并实现了基于HBase的存储模块原型
+\end{itemize}}
+
+%------------------------------------------------
+
+\cventry{2012.3--2012.7}{Taurus}{项目参与者}{}{一个IMS综合防护系统}{
+\itshape
+该系统通过分析SBC截获的SIP消息报文，发现并阻止可能的入侵行为。另外，基于积累的SIP日志，该系统还可以进行用户行为分析
+\upshape
+\begin{itemize}
+\item 参与技术方案设计，负责管理、日志分析模块的开发，使用\texttt{Java, Python, RabbitMQ}等
+\end{itemize}}
+
+%------------------------------------------------
+
+%\subsection{开源项目}
+
+%------------------------------------------------
+
+%\subsection{开源项目}
+%\cventry{2012.6}{BYR Client For WP7}{个人项目}{}{北邮人论坛WP7客户端}{
+%\itshape
+%该客户端通过调用北邮人论坛的API，实现了基本的阅读、回复、查看贴图功能。
+%\upshape
+%\begin{itemize}
+%\item 使用C\#，基于Siverlight进行开发，使用了RestSharp等开源工具包
+%\item 发布到Windows Phone应用商店，在\underline{\href{http://github.com/imley/BYRClientForWP7}{github}}开源发布
+%\end{itemize}}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{专业技能}
+ 
+\footnotetext[1]{主要编程语言/常使用工具，了解相对深入}
+\footnotetext[2]{较系统地学习过，了解基本原理}
+\footnotetext[3]{曾在项目中使，用了解基本语法/用法}
+
+\subsection{开发技能}
+\cvitem{编程语言}{\texttt{Java\footnotemark[1], Python\footnotemark[1], C\footnotemark[2], C++\footnotemark[3], PHP\footnotemark[3], C\#\footnotemark[3], Shell/Bash\footnotemark[3], Ruby\footnotemark[3]}}
+\cvitem{开发框架}{\texttt{Struts 2\footnotemark[2], Flask\footnotemark[3], CodeIgniter\footnotemark[3]}}
+\cvitem{代码管理}{\texttt{Git\footnotemark[2], SVN\footnotemark[1]}}
+\cvitem{Web开发}{\texttt{HTML/XHTML\footnotemark[2], CSS\footnotemark[2], Javascript\footnotemark[3]}}
+\cvitem{数据库}{\texttt{MySQL\footnotemark[2], HBase\footnotemark[2]}}
+\cvitem{工具}{\texttt{Redmine\footnotemark[1], Hudson\footnotemark[2], Maven\footnotemark[2], GitHub\footnotemark[2]}}
+\cvitem{文本编辑}{\LaTeX\footnotemark[3], \texttt{Office\footnotemark[2], Markdown\footnotemark[2]}}
+
+\subsection{运维技能}
+\cvitem{操作系统}{\texttt{GNU/Linux(Ubuntu/RHEL/Arch)\footnotemark[1], OSX\footnotemark[2], Windows\footnotemark[2]}}
+\cvitem{Web服务器}{\texttt{Apache\footnotemark[2], Nginx\footnotemark[2], lighttpd\footnotemark[3]}}
+\cvitem{虚拟化}{\texttt{libvirt\footnotemark[1], KVM\footnotemark[2], Xen\footnotemark[3]}}
+\cvitem{网络管理}{\texttt{iptables\footnotemark[2], ebtables\footnotemark[2], named\footnotemark[3]}}
+\cvitem{监控部署}{\texttt{Chef\footnotemark[2], DevOps\footnotemark[2], ganglia\footnotemark[3]}}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{所获奖项}
+
+\subsection{校内荣誉}
+\cvitem{2012}{北京邮电大学交换与智能控制中心 \textbf{优秀研究生}}
+\cvitem{2011, 2012}{北京邮电大学 \textbf{二等奖学金}}
+\cvitem{2011}{北京邮电大学 \textbf{优秀毕业生}}
+\cvitem{2009, 2010}{北京邮电大学 \textbf{一等奖学金}}
+\cvitem{2008}{北京邮电大学 \textbf{二等奖学金}}
+
+\subsection{竞赛获奖}
+\cvitem{2010.7}{飞思卡尔杯全国大学生智能车竞赛 \textbf{华北赛区二等奖}}
+\cvitem{2010.2}{国际大学生数学建模竞赛 \textbf{二等奖}}
+\cvitem{2009.9}{全国大学生数学建模竞赛 \textbf{北京市二等奖}}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{语言能力}
+
+\cvitemwithcomment{英语}{CET6 -- 529}{}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{兴趣爱好}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{摄影}{跑步}
+\cvlistdoubleitem{烹饪}{阅读}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+% \clearpage
+
+% \recipient{HR Departmnet}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+% \date{\today} % Letter date
+% \opening{Dear Sir or Madam,} % Opening greeting
+% \closing{Sincerely yours,} % Closing phrase
+% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+% \makelettertitle % Print letter title
+
+% \lipsum[1-3] % Dummy text
+
+% \makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------------
+
+%\end{CJK}
+\end{document}

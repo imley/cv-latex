@@ -1,0 +1,203 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{footmisc}
+
+\usepackage[scale=0.75, top=2cm, bottom=3cm]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Lei} % Your first name
+\familyname{Jiang} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{10th Xitucheng Rd.}{Haidian District, Beijing 100876}
+\mobile{(086) 186 0006 2203}
+%\phone{(000) 111 1112}
+%\fax{(000) 111 1113}
+\email{ley@imley.net}
+\homepage{cv.imley.net/?from=ms}{cv.imley.net} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+\photo[70pt][0.4pt]{pictures/jl.jpg} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\quote{"Knowlege is Power" - Francis Bacon}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+
+\cventry{2011--2014}{Masters of Computer Science and Technology}{Beijing University of Posts and Telecommunications}{}{\textit{GPA -- 82}}{}  % Arguments not required can be left empty
+\cventry{2007--2011}{Bachelor of Computer Science and Technology}{Beijing University of Posts and Telecommunications}{}{\textit{GPA -- 89, Top 5\%}}{Outstanding Graduates}
+
+%\section{Masters Thesis}
+
+%\cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
+%\cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
+%\cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\subsection{Internship}
+
+%------------------------------------------------
+
+\cventry{2011.5--2012.2}{Intern Developer in Test}{Baidu Inc.}{Baidu Map GIS Test}{}{
+\itshape
+Baidu Map GIS Test team is in charge to test related to GIS engine such as route planning, static map image generation, etc.
+\upshape
+\begin{itemize}
+\item Took charge of the Testing of \bfseries{Inter City Traffic}\mdseries, participated throughout design, development, testing and deployment.
+\item Developed the minimal test datasets generator of Bus Route Planner(BRP) and Inter-city Route Planner(IRP), with CodeIgniter(PHP) and Python.
+\item Maintained testcases for BRP and IRP, set up CI environtment and wrote CI scripts.
+\item Nominated as Outstanding Intern, received the \textbf{Cutest Intern} award.
+\end{itemize}}
+
+%------------------------------------------------
+
+\subsection{Team Projects}
+
+%------------------------------------------------
+
+\cventry{2012.2--Present}{Yunhai 3.0}{Team Leader}{}{A Hybrid Cloud Platform}{
+\itshape The Yunhai is a hybrid cloud-computing platform providing PaaS and IaaS services at the same time. We used Jetty to provide Java Web applications and libvirt for VM hosting, Nginx is used for app routing and load balance.
+\upshape
+\begin{itemize}
+\item As team leader, design the new underlying architechture.
+\item Developed the common utils and several modules.
+\item Experimented with \texttt{Hudson} and \texttt{Chef} for continuous integration and automated deployment.
+\end{itemize}}
+
+%------------------------------------------------
+
+\cventry{2012.10--2012.12}{Freesearch}{Paticipator}{}{A SV mode search engine}{
+\itshape The Freesearch is search engine that used for internal usage, instead of crawling the content itself, the search engine provide API for developer to submmit the content, it also providing storage capability with developer-defined tags.
+\upshape
+\begin{itemize}
+\item Participated in system design, developed the prototype of storage module on \texttt{HBase}.
+\end{itemize}}
+
+%------------------------------------------------
+
+\cventry{2012.3--2012.7}{Taurus}{Participator}{}{An IMS Vulnerability Maintainance System}{
+\itshape
+The system found the vulnerability of the IMS by analyse the packet SBC receives.
+\upshape
+\begin{itemize}
+\item Participate in designing of the system, and developed \texttt{Manager} and \texttt{Log Analyser} modules, \texttt{Java, Python, RabbitMQ} are used.
+\end{itemize}}
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Computer Skills}
+ 
+\footnotetext[1]{Familiar}
+\footnotetext[2]{Less familier}
+\footnotetext[3]{Knows about basic usage}
+
+\subsection{Development}
+\cvitem{Language}{\texttt{Java\footnotemark[1], Python\footnotemark[1], C\footnotemark[2], PHP\footnotemark[2], C\#\footnotemark[3], Shell/Bash\footnotemark[3], C++\footnotemark[3], Ruby\footnotemark[3]}}
+\cvitem{Framework}{\texttt{Struts 2\footnotemark[2], Flask\footnotemark[3], CodeIgniter\footnotemark[3]}}
+\cvitem{Web}{\texttt{HTML/XHTML\footnotemark[2], CSS\footnotemark[2], Javascript\footnotemark[3]}}
+\cvitem{Database}{\texttt{MySQL\footnotemark[2], HBase\footnotemark[2]}}
+\cvitem{Tools}{\texttt{Redmine\footnotemark[1], Hudson\footnotemark[2], Maven\footnotemark[2], GitHub\footnotemark[2]}}
+\cvitem{Editing}{\LaTeX\footnotemark[3], \texttt{Office\footnotemark[2], Markdown\footnotemark[2]}}
+\cvitem{Code Management}{\texttt{Git\footnotemark[2], SVN\footnotemark[1]}}
+
+\subsection{System and Network Administration}
+\cvitem{OS}{\texttt{GNU/Linux(Ubuntu/RHEL/Arch)\footnotemark[1], Mac OSX\footnotemark[2], Windows\footnotemark[2]}}
+\cvitem{Web Server}{\texttt{Apache\footnotemark[2], Nginx\footnotemark[2], lighttpd\footnotemark[3]}}
+\cvitem{Virtualization}{\texttt{libvirt\footnotemark[1], KVM\footnotemark[2], Xen\footnotemark[3]}}
+\cvitem{Network}{\texttt{iptables\footnotemark[2], ebtables\footnotemark[2], named\footnotemark[3]}}
+\cvitem{Monitoring \& Deployment}{\texttt{Chef\footnotemark[2], DevOps\footnotemark[2], ganglia\footnotemark[3]}}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Honor and Awards}
+
+\footnotetext[4]{State Key Laboratory of Networking and Switching Technology}
+\footnotetext[5]{Beijing University of Posts and Telecommunications}
+
+\subsection{Honors}
+\cvitem{2012}{SKLNST\footnotemark[4], BUPT\footnotemark[5] \bfseries{Outstanding Student, Second Class}}
+\cvitem{2011, 2012}{BUPT \bfseries{Second Class Scholarship}}
+\cvitem{2011}{BUPT \bfseries{Outstanding Graduates}}
+\cvitem{2009, 2010}{BUPT \bfseries{First Class Scholarship}}
+\cvitem{2008}{BUPT \bfseries{Second Class Scholarship}}
+
+\subsection{Awards}
+\cvitem{2010.7}{Freescale Cup Intelligent Car Racing \bfseries{Secondary Prize in North China Area}}
+\cvitem{2010.2}{Mathematical Contest in Modeling \bfseries{Honorable Mention}}
+\cvitem{2009.9}{Mathematical Contest in Modeling \bfseries{Secondary Prize in Beijing District}}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{English}{CET-6 529}{}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Photography}{Running}
+\cvlistdoubleitem{Cooking}{Reading}
+
+\end{document}
