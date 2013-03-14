@@ -32,8 +32,18 @@
 \usepackage{footmisc}
 
 \usepackage[scale=0.75, top=2cm, bottom=3cm]{geometry} % Reduce document margins
+\usepackage[firstyear=2007, lastyear=2014]{moderntimeline}
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+\makeatletter
+\tikzset{
+    tl@startyear/.append style={
+        xshift=(0.5-\tl@startfraction)*\hintscolumnwidth,
+        anchor=base
+    }
+}
+\makeatother
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
@@ -67,9 +77,8 @@
 
 \section{Education}
 
-
-\cventry{2011.9\phantom{--}--2014.4\phantom{ab}}{Masters of Computer Science and Technology}{Beijing University of Posts and Telecommunications}{}{\textit{GPA -- 82}}{}  % Arguments not required can be left empty
-\cventry{2007.9\phantom{--}--2011.7\phantom{ab}}{Bachelor of Computer Science and Technology}{Beijing University of Posts and Telecommunications}{}{\textit{GPA -- 89, Top 5\%}}{Outstanding Graduates}
+\tllabelcventry{2011}{0}{2011.9}{Masters of Computer Science and Technology}{Beijing University of Posts and Telecommunications}{}{\textit{GPA -- 82}}{}  % Arguments not required can be left empty
+\tllabelcventry{2007}{2011}{2007.9-2011.7}{Bachelor of Computer Science and Technology}{Beijing University of Posts and Telecommunications}{}{\textit{GPA -- 89, Top 5\%}}{Outstanding Graduates}
 
 %\section{Masters Thesis}
 
@@ -87,7 +96,7 @@
 
 %------------------------------------------------
 
-\cventry{2011.5\phantom{--}--2012.2\phantom{ab}}{Intern Developer in Test}{Baidu Inc.}{Baidu Map GIS Test}{}{
+\tllabelcventry{2011.5}{2012.2}{2011.5-2012.2}{Intern Developer in Test}{Baidu Inc.}{Baidu Map GIS Test}{}{
 \itshape
 Baidu Map GIS Test team is in charge to test related to GIS engine such as route planning, static map image generation, etc.
 \upshape
@@ -100,11 +109,11 @@ Baidu Map GIS Test team is in charge to test related to GIS engine such as route
 
 %------------------------------------------------
 
-\subsection{Team Projects}
+\subsection{Projects}
 
 %------------------------------------------------
 
-\cventry{2012.2--Present}{Yunhai 3.0}{Team Leader}{}{A Hybrid Cloud Platform}{
+\tllabelcventry{2012}{0}{2012.2-Present}{Yunhai 3.0}{Team Leader}{}{A Hybrid Cloud Platform}{
 \itshape The Yunhai is a hybrid cloud-computing platform providing PaaS and IaaS services at the same time. We used Jetty to provide Java Web applications and libvirt for VM hosting, Nginx is used for app routing and load balance.
 \upshape
 \begin{itemize}
@@ -115,7 +124,7 @@ Baidu Map GIS Test team is in charge to test related to GIS engine such as route
 
 %------------------------------------------------
 
-\cventry{2012.10\phantom{--}--2012.12\phantom{ab}}{Freesearch}{Paticipator}{}{A SV mode search engine}{
+\tllabelcventry{2012}{2013}{2012.10-2013.1}{Freesearch}{Paticipator}{}{A SV mode search engine}{
 \itshape The Freesearch is search engine that used for internal usage, instead of crawling the content itself, the search engine provide API for developer to submmit the content, it also providing storage capability with developer-defined tags.
 \upshape
 \begin{itemize}
@@ -124,12 +133,12 @@ Baidu Map GIS Test team is in charge to test related to GIS engine such as route
 
 %------------------------------------------------
 
-\cventry{2012.3\phantom{--}--2012.7\phantom{ab}}{Taurus}{Participator}{}{An IMS Vulnerability Maintainance System}{
+\tllabelcventry{2011}{2012}{2011.3-2012.7}{Taurus}{Participator}{}{An IMS Vulnerability Maintainance System}{
 \itshape
-The system found the vulnerability of the IMS by analyse the packet SBC receives.
+The system found the vulnerability of the IMS by analysing the packet SBC receives.
 \upshape
 \begin{itemize}
-\item Participate in designing of the system, and developed \texttt{Manager} and \texttt{Log Analyser} modules, \texttt{Java, Python, RabbitMQ} are used.
+\item Participate in system design, and developed \texttt{Manager} and \texttt{Log Analyser} modules, \texttt{Java, Python, RabbitMQ} are used.
 \end{itemize}}
 
 %------------------------------------------------
@@ -142,7 +151,7 @@ The system found the vulnerability of the IMS by analyse the packet SBC receives
  
 \footnotetext[1]{Familiar}
 \footnotetext[2]{Less familier}
-\footnotetext[3]{Knows about basic usage}
+\footnotetext[3]{Learn about basic usage}
 
 \subsection{Development}
 \cvitem{Language}{\texttt{Java\footnotemark[1], Python\footnotemark[1], C\footnotemark[2], PHP\footnotemark[2], C\#\footnotemark[3], Shell/Bash\footnotemark[3], C++\footnotemark[3], Ruby\footnotemark[3]}}

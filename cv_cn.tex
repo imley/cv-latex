@@ -32,8 +32,18 @@
 %\usepackage{CJKutf8}
 \usepackage{xeCJK}
 \usepackage{footmisc}
+\usepackage[firstyear=2007, lastyear=2014]{moderntimeline}
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+\makeatletter
+\tikzset{
+    tl@startyear/.append style={
+        xshift=(0.5-\tl@startfraction)*\hintscolumnwidth,
+        anchor=base
+    }
+}
+\makeatother
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
@@ -65,8 +75,8 @@
 
 \section{教育背景}
 
-\cventry{2011.9\phantom{--}--2014.4\phantom{ab}}{工学硕士}{北京邮电大学}{}{\textit{GPA -- 82}}{}  % Arguments not required can be left empty
-\cventry{2007.9\phantom{--}--2011.7\phantom{ab}}{工学学士}{北京邮电大学}{}{\textit{GPA -- 89, 前5\%}}{优秀毕业生}
+\tllabelcventry{2011}{0}{2011.9}{工学硕士}{北京邮电大学}{}{\textit{GPA -- 82}}{}  % Arguments not required can be left empty
+\tllabelcventry{2007}{2011}{2007.9-2011.7}{工学学士}{北京邮电大学}{}{\textit{GPA -- 89, 前5\%}}{优秀毕业生}
 
 %\section{Masters Thesis}
 
@@ -84,7 +94,7 @@
 
 \subsection{实习经历}
 
-\cventry{2011.5\phantom{--}--2012.2\phantom{ab}}{实习测试开发工程师}{百度}{百度地图引擎测试}{}{
+\tllabelcventry{2011.5}{2012.2}{2011.5-2012.2}{实习测试开发工程师}{百度}{百度地图引擎测试}{}{
 \itshape
 所在小组主要负责百度地图后端引擎模块的测试。实习期间，主要负责组内持续集成事务的推进，负责公交、跨城市公交等模块的功能测试。
 \upshape
@@ -97,9 +107,9 @@
 
 %------------------------------------------------
 
-\subsection{项目经历}
+\subsection{实验室项目}
 
-\cventry{2012.2--现在}{云海3.0}{项目负责人}{}{开放调度的融合云计算平台}{
+\tllabelcventry{2012}{0}{2012.2-Present}{云海3.0}{项目负责人}{}{开放调度的融合云计算平台}{
 \itshape该平台基于Java实现，融合了传统的PaaS云平台和IaaS平台提供的服务。底层使用Jetty托管Java Web应用，libvirt+KVM托管虚拟机应用。并使用Nginx实现基于域名的应用路由和多实例负载均衡。
 \upshape
 \begin{itemize}
@@ -110,7 +120,7 @@
 
 %------------------------------------------------
 
-\cventry{2012.10\phantom{--}--2012.12\phantom{ab}}{Freesearch}{项目参与者}{}{SV模式的搜索引擎}{
+\tllabelcventry{2012}{2013}{2012.10-2013.1}{Freesearch}{项目参与者}{}{SV模式的搜索引擎}{
 \itshape该搜索引擎用于内部产品的搜索，改变了传统的基于抓取的方式，开发者通过API主动提交需要索引的内容，另外还提供了基于标签的信息存储能力。
 \upshape
 \begin{itemize}
@@ -119,7 +129,7 @@
 
 %------------------------------------------------
 
-\cventry{2012.3\phantom{--}--2012.7\phantom{ab}}{Taurus}{项目参与者}{}{一个IMS综合防护系统}{
+\tllabelcventry{2011}{2012}{2011.3-2012.7}{Taurus}{项目参与者}{}{一个IMS综合防护系统}{
 \itshape
 该系统通过分析SBC截获的SIP消息报文，发现并阻止可能的入侵行为。另外，基于积累的SIP日志，该系统还可以进行用户行为分析
 \upshape
